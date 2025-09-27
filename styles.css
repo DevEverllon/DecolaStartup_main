@@ -83,8 +83,8 @@ img, video {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #111;
-  color: rgba(255, 255, 255, 0.8470588235);
+  background-color: #09090A;
+  color: #FCFCFC;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, button {
-  color: rgba(255, 255, 255, 0.8470588235);
+  color: #FCFCFC;
 }
 
 body.no-scroll {
@@ -102,20 +102,19 @@ body.no-scroll {
 
 .navbar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #222;
-  border-radius: 25px;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0.1rem 2rem;
-  margin: 1.5rem auto;
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 1000;
+  max-width: 1200px;
+  margin: 16px auto 0 auto;
+  padding: 8px 16px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #18191B;
+  border-radius: 25px;
   transform: translateY(-130%);
   transition: transform 0.3s ease-in-out;
 }
@@ -123,7 +122,7 @@ body.no-scroll {
   width: 80px;
   height: auto;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 .navbar .logo:hover {
   transform: scale(1.05);
@@ -135,12 +134,12 @@ body.no-scroll {
 .navbar .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.9rem;
+  gap: 30.4px;
 }
 .navbar .nav-links li a {
   position: relative;
   border-bottom: none;
-  padding-bottom: 0.2rem;
+  padding-bottom: 3.2px;
   font-weight: 500;
   transition: color 0.3s ease;
   font-size: 1rem;
@@ -156,21 +155,21 @@ body.no-scroll {
   transition: width 0.3s ease;
 }
 .navbar .nav-links li a:hover {
-  color: rgba(255, 255, 255, 0.8470588235);
+  color: #FCFCFC;
 }
 .navbar .nav-links li a:hover::after {
   width: 100%;
 }
 .navbar .nav-button-link button {
   background-color: transparent;
+  color: #FCFCFC;
   border: 2px solid #00e0ff;
-  color: rgba(255, 255, 255, 0.8470588235);
-  padding: 0.5rem 1rem;
-  border-radius: 12.5px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  border-radius: 15.5px;
   font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .navbar .nav-button-link button:hover {
   border: 2px solid #00e0ff;
@@ -179,7 +178,7 @@ body.no-scroll {
 .navbar .social-media {
   display: none;
   align-items: center;
-  gap: 1rem;
+  gap: 32px;
   font-size: 1.2rem;
 }
 
@@ -189,12 +188,12 @@ body.no-scroll {
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     border-radius: 20px;
     width: 95%;
     max-width: 100%;
-    margin: 1rem auto;
-    gap: 1rem;
+    margin: 16px auto;
+    gap: 16px;
     flex-wrap: wrap;
   }
   .navbar .logo {
@@ -211,7 +210,7 @@ body.no-scroll {
     font-size: 1.8rem;
     display: flex;
     align-items: center;
-    padding: 0.3rem;
+    padding: 4.8px;
     border: 1.9px solid rgba(255, 255, 255, 0.1490196078);
     border-radius: 10px;
   }
@@ -223,7 +222,7 @@ body.no-scroll {
     flex-direction: column;
     width: 100%;
     border-top: 2px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem 0;
+    padding: 32px 0;
     transition: max-height 0.3s ease-in-out;
     overflow: hidden;
   }
@@ -232,8 +231,8 @@ body.no-scroll {
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0.3rem 0;
-    margin-bottom: 1rem;
+    padding: 4.8px 0;
+    margin-bottom: 32px;
   }
   .navbar .social-media a {
     font-size: 1.6rem;
@@ -241,7 +240,7 @@ body.no-scroll {
     transition: color 0.3s ease-in-out;
   }
   .navbar .social-media a:hover {
-    color: rgba(255, 255, 255, 0.8470588235);
+    color: #FCFCFC;
   }
   .navbar .nav-button-link {
     width: 100%;
@@ -264,7 +263,7 @@ body.no-scroll {
     width: 50px;
   }
   .navbar .nav-button-link button {
-    padding: 0.4rem 0.8rem;
+    padding: 6.4px 12.8px;
     font-size: 0.9rem;
   }
 }
@@ -277,9 +276,13 @@ body.no-scroll {
   right: 0;
   background: #00e0ff;
   border-radius: 0 0 20px 20px;
-  gap: 1rem;
-  padding: 1rem 0;
+  gap: 16px;
+  padding: 16px 0;
   z-index: 1100;
+}
+
+div {
+  font-family: "PolySans", sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */

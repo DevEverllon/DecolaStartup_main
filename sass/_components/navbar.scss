@@ -3,33 +3,39 @@ body.no-scroll {
 }
 
 .navbar {
+  // Layout
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background-color: $black-normal;
-  border-radius: 25px;
-
-  width: 100%;
-  max-width: 1200px;
-  padding: 0.1rem 2rem;
-  margin: 1.5rem auto;
-
-  //   Para deixar-lo fixo no topo
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
+
+  // Box Model
   width: 100%;
-  z-index: 1000;
+  max-width: 1200px;
+  margin: 16px auto 0 auto;
+  padding: 8px 16px;
+
+  // Flex
+  align-items: center;
+  justify-content: space-between;
+
+  // Design
+  background-color: $black-normal;
+  border-radius: 25px;
+
+  // Outros
   transform: translateY(-130%); // Inicialmente escondido
-  transition: transform 0.3s ease-in-out; // Transição suave para o efeito de esconder/mostrar
+  @include smooth-transition(
+    transform
+  ); // Mesmo que | transition: transform 0.3s ease-in-out;
 
   .logo {
     width: 80px;
     height: auto;
     object-fit: contain;
-    transition: transform 0.3s ease;
+    @include smooth-transition(transform);
   }
 
   .logo:hover {
@@ -44,13 +50,13 @@ body.no-scroll {
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 1.9rem;
+    gap: 30.4px;
   }
 
   .nav-links li a {
     position: relative;
     border-bottom: none;
-    padding-bottom: 0.2rem;
+    padding-bottom: 3.2px;
     font-weight: 500;
     transition: color 0.3s ease;
     font-size: 1rem;
@@ -76,15 +82,16 @@ body.no-scroll {
   }
 
   .nav-button-link button {
-    background-color: transparent;
-    border: 2px solid $primary-color;
-    color: $whitee-normal;
-    padding: 0.5rem 1rem;
-    border-radius: 12.5px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1rem;
+    // background-color: transparent;
+    // border: 2px solid $primary-color;
+    // color: $whitee-normal;
+    // padding: 0.5rem 1rem;
+    // border-radius: 12.5px;
+    // font-weight: 500;
+    // cursor: pointer;
+    // transition: all 0.3s ease;
+    // font-size: 1rem;
+    @include button-navbar_style;
   }
 
   .nav-button-link button:hover {
@@ -95,7 +102,7 @@ body.no-scroll {
   .social-media {
     display: none;
     align-items: center;
-    gap: 1rem;
+    gap: 32px;
     font-size: 1.2rem;
   }
 }
@@ -108,12 +115,12 @@ body.no-scroll {
 // Estilos responsivos para telas menores
 @media (max-width: 768px) {
   .navbar {
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     border-radius: 20px;
     width: 95%;
     max-width: 100%;
-    margin: 1rem auto;
-    gap: 1rem;
+    margin: 16px auto;
+    gap: 16px;
     flex-wrap: wrap;
 
     .logo {
@@ -131,7 +138,7 @@ body.no-scroll {
         font-size: 1.8rem;
         display: flex;
         align-items: center;
-        padding: 0.3rem;
+        padding: 4.8px;
         border: 1.9px solid #ffffff26;
         border-radius: 10px;
       }
@@ -146,7 +153,7 @@ body.no-scroll {
       flex-direction: column;
       width: 100%;
       border-top: 2px solid rgba(255, 255, 255, 0.1);
-      padding: 2rem 0;
+      padding: 32px 0;
       transition: max-height 0.3s ease-in-out;
       overflow: hidden;
     }
@@ -156,8 +163,8 @@ body.no-scroll {
       justify-content: space-around;
       flex-wrap: wrap;
       width: 100%;
-      padding: 0.3rem 0;
-      margin-bottom: 1rem;
+      padding: 4.8px 0;
+      margin-bottom: 32px;
 
       a {
         font-size: 1.6rem;
@@ -198,7 +205,7 @@ body.no-scroll {
     }
 
     .nav-button-link button {
-      padding: 0.4rem 0.8rem;
+      padding: 6.4px 12.8px;
       font-size: 0.9rem;
     }
   }
@@ -215,8 +222,8 @@ body.no-scroll {
     right: 0;
     background: $primary-color;
     border-radius: 0 0 20px 20px;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 16px;
+    padding: 16px 0;
     z-index: 1100;
   }
 }

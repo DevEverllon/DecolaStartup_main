@@ -1,0 +1,17 @@
+//  Transições suaves
+@mixin smooth-transition($property: all, $duration: 0.3s, $timing: ease-in-out){
+    transition: $property $duration $timing;
+}
+
+// Estilo do botão do navbar
+@mixin button-navbar_style{
+    background-color: transparent;
+    color: $whitee-normal;
+    border: 2px solid $primary-color;
+    border-radius: 15.5px;
+    font-size: 1rem; //16px
+    font-weight: 500;
+    padding:  8px 16px; //0.5rem 1rem
+    cursor: pointer;
+    @include smooth-transition(all) 
+}

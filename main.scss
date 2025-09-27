@@ -1,4 +1,10 @@
 @import 'sass/_abstract/variable.scss';
 @import 'sass/_base/reset.scss';
+@import 'sass/_abstract/mixins.scss';
 @import 'sass/_base/base.scss';
 @import 'sass/_components/navbar.scss';
+
+div {
+  font-family: "PolySans", sans-serif;
+  
+}
