@@ -1,0 +1,141 @@
+.hore {
+  display: flex;
+
+  width: 100%;
+  max-width: 1280px;
+  height: 100vh;
+  margin: auto;
+
+  justify-content: space-between;
+  align-items: center;
+
+  .hero-content {
+    display: flex;
+    gap: 25px;
+
+    width: 50%;
+
+    flex-direction: column;
+
+    .hero-subtitle {
+      display: flex;
+      padding: 8px 16px;
+      width: fit-content;
+      align-items: center;
+      gap: 15px;
+
+      border-radius: 100px;
+      border: 2px solid #80808017;
+      color: $text-gray;
+      background-color: #8080802f;
+      font-weight: 500;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-family: $font-family-alt;
+      font-weight: 600;
+
+      background: linear-gradient(45deg, $primary-color, $secondary-color);
+      background-size: 400% 100%;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      animation: gradientText 8s linear infinite alternate;
+    }
+
+    .hero-description {
+      font-size: 1.7rem;
+      font-weight: 100;
+      color: $text-gray;
+      line-height: 32px;
+    }
+
+    .btn-primary {
+      @include button-navbar_style;
+      width: fit-content;
+      font-size: 1.4rem;
+
+      display: flex;
+      gap: 8px;
+    }
+  }
+
+  .hero-image {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+
+  .main-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  .floating {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .floating img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+  }
+
+  /* Posições iniciais */
+  .floating1 {
+    top: -30px;
+    left: -40px;
+    animation-delay: 0s;
+  }
+  .floating2 {
+    top: 20px;
+    right: -50px;
+    animation-delay: 1s;
+  }
+  .floating3 {
+    bottom: 30px;
+    left: -60px;
+    animation-delay: 2s;
+  }
+  .floating4 {
+    bottom: -40px;
+    right: 20px;
+    animation-delay: 3s;
+  }
+  .floating5 {
+    top: -40px;
+    right: 80px;
+    animation-delay: 4s;
+  }
+
+  /* Animação de flutuação */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) scale(1);
+    }
+    50% {
+      transform: translateY(-15px) scale(1.05);
+    }
+  }
+}
+
+@keyframes gradientText {
+  0% {
+    background-position-x: 0%;
+  }
+
+  50% {
+    background-position: 200%;
+  }
+}

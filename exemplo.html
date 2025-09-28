@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background: #0e0e0e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        position: relative;
+        width: 400px;
+        height: 400px;
+      }
+
+      .main-image img {
+        width: 250px;
+        height: auto;
+        border-radius: 20px;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.6);
+      }
+
+      .floating {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .floating img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+      }
+
+      /* Posições iniciais */
+      .floating1 {
+        top: -30px;
+        left: -40px;
+        animation-delay: 0s;
+      }
+      .floating2 {
+        top: 20px;
+        right: -50px;
+        animation-delay: 1s;
+      }
+      .floating3 {
+        bottom: 30px;
+        left: -60px;
+        animation-delay: 2s;
+      }
+      .floating4 {
+        bottom: -40px;
+        right: 20px;
+        animation-delay: 3s;
+      }
+      .floating5 {
+        top: -40px;
+        right: 80px;
+        animation-delay: 4s;
+      }
+
+      /* Animação de flutuação */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) scale(1);
+        }
+        50% {
+          transform: translateY(-15px) scale(1.05);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-image">
+        <img
+          src="assets/logos_decolaStartup/logo-decolaStartup.png"
+          alt="Imagem Principal"
+        />
+      </div>
+
+      <div class="floating floating1">
+        <img
+          src="assets/logos_decolaStartup/logo-decolaStarup-transparent.png"
+          alt="Figma"
+        />
+      </div>
+
+      <div class="floating floating2">
+        <img
+          src="assets/logos_decolaStartup/logo-decolaStarup-transparent.png"
+          alt="Google UX"
+        />
+      </div>
+
+      <div class="floating floating3">
+        <img src="adobe.png" alt="Adobe" />
+      </div>
+
+      <div class="floating floating4">
+        <img src="icon1.png" alt="Icone 1" />
+      </div>
+      
+      <div class="floating floating5">
+        <img src="icon2.png" alt="Icone 2" />
+      </div>
+    </div>
+
+    <script>
+      gsap.from(".floating", {
+        y: -30,
+        opacity: 0,
+        stagger: 0.3,
+        duration: 1.5,
+        ease: "power2.out",
+      });
+
+      gsap.to(".floating", {
+        y: "+=20",
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        duration: 2,
+        stagger: 0.2,
+      });
+    </script>
+  </body>
+</html>
