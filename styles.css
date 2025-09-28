@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* _base/reset.scss */
 /* Reset CSS para diferentes navegadores */
 html, body, div, span, applet, object, iframe,
@@ -281,7 +280,7 @@ body.no-scroll {
   z-index: 1100;
 }
 
-.hore {
+.hero {
   display: flex;
   width: 100%;
   max-width: 1280px;
@@ -290,13 +289,13 @@ body.no-scroll {
   justify-content: space-between;
   align-items: center;
 }
-.hore .hero-content {
+.hero .hero-content {
   display: flex;
   gap: 25px;
   width: 50%;
   flex-direction: column;
 }
-.hore .hero-content .hero-subtitle {
+.hero .hero-content .hero-subtitle {
   display: flex;
   padding: 8px 16px;
   width: fit-content;
@@ -308,7 +307,7 @@ body.no-scroll {
   background-color: rgba(128, 128, 128, 0.1843137255);
   font-weight: 500;
 }
-.hore .hero-content .hero-title {
+.hero .hero-content .hero-title {
   font-size: 3.5rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -318,13 +317,13 @@ body.no-scroll {
   -webkit-text-fill-color: transparent;
   animation: gradientText 8s linear infinite alternate;
 }
-.hore .hero-content .hero-description {
+.hero .hero-content .hero-description {
   font-size: 1.7rem;
   font-weight: 100;
   color: #777B84;
   line-height: 32px;
 }
-.hore .hero-content .btn-primary {
+.hero .hero-content .btn-primary {
   background-color: transparent;
   color: #FCFCFC;
   border: 2px solid #00e0ff;
@@ -339,77 +338,115 @@ body.no-scroll {
   display: flex;
   gap: 8px;
 }
-.hore .hero-image {
-  position: relative;
-  width: 400px;
-  height: 400px;
-}
-.hore .main-image img {
-  width: 250px;
-  height: auto;
-  border-radius: 20px;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.6);
-}
-.hore .floating {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  animation: float 6s ease-in-out infinite;
-}
-.hore .floating img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
-}
-.hore {
-  /* Posições iniciais */
-}
-.hore .floating1 {
-  top: -30px;
-  left: -40px;
-  animation-delay: 0s;
-}
-.hore .floating2 {
-  top: 20px;
-  right: -50px;
-  animation-delay: 1s;
-}
-.hore .floating3 {
-  bottom: 30px;
-  left: -60px;
-  animation-delay: 2s;
-}
-.hore .floating4 {
-  bottom: -40px;
-  right: 20px;
-  animation-delay: 3s;
-}
-.hore .floating5 {
-  top: -40px;
-  right: 80px;
-  animation-delay: 4s;
-}
-.hore {
-  /* Animação de flutuação */
-}
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) scale(1);
-  }
-  50% {
-    transform: translateY(-15px) scale(1.05);
-  }
-}
-
 @keyframes gradientText {
   0% {
     background-position-x: 0%;
   }
   50% {
     background-position: 200%;
+  }
+}
+.hero .hero-image {
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+.hero .hero-image .main-image img {
+  position: relative;
+  width: 250px;
+  height: auto;
+  margin: auto;
+  z-index: 2;
+}
+.hero .hero-image .floating {
+  position: absolute;
+}
+.hero .hero-image .floating img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+}
+.hero .hero-image .floating1 {
+  top: -30px;
+  left: 70px;
+  width: 199px;
+  height: 256px;
+  animation: float_floating1 6s infinite ease-in-out;
+  animation-delay: 0s;
+}
+.hero .hero-image .floating2 {
+  top: 300px;
+  left: 95px;
+  z-index: 3;
+  width: 129px;
+  height: 130px;
+  animation: float_floating2 6s infinite ease-in-out;
+  animation-delay: 1s;
+}
+.hero .hero-image .floating3 {
+  display: flex;
+  width: 60px;
+  padding: 8px;
+  bottom: 30px;
+  left: 50px;
+  z-index: 3;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgba(24, 24, 24, 0.411);
+  border: 2px solid rgba(27, 27, 27, 0.568);
+  border-radius: 8px;
+  filter: grayscale(100%);
+}
+.hero .hero-image .floating3 img:hover {
+  filter: filter(#00ff85);
+}
+.hero .hero-image .floating4 {
+  bottom: 70px;
+  right: 130px;
+  z-index: 3;
+  animation: float_floating4 10s infinite;
+  animation-delay: 2s;
+}
+.hero .hero-image .floating5 {
+  top: -40px;
+  right: 80px;
+  z-index: 3;
+  width: 125px;
+  height: 125px;
+  animation: float_floating5 5s infinite ease-in-out;
+  animation-delay: 4s;
+}
+@keyframes float_floating1 {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.1);
+  }
+}
+@keyframes float_floating2 {
+  0%, 100% {
+    transform: rotate(-10deg) scale(1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.1);
+  }
+}
+@keyframes float_floating4 {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes float_floating5 {
+  0%, 100% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
   }
 }
 
