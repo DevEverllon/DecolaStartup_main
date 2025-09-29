@@ -9,6 +9,10 @@
   justify-content: space-between;
   align-items: center;
 
+  img {
+    pointer-events: none;
+  }
+
   .hero-content {
     display: flex;
     gap: 25px;
@@ -76,7 +80,7 @@
   .hero-image {
     position: relative;
     width: 50%;
-    height: auto; //*********************************************
+    height: auto;
 
     .main-image img {
       position: relative;
@@ -84,13 +88,10 @@
       height: auto;
       margin: auto;
       z-index: 2;
-      // box-shadow: $box-shadow;
     }
 
     .floating {
       position: absolute;
-      // width: 70px;
-      // height: 70px;
     }
 
     .floating img {
@@ -104,9 +105,11 @@
     .floating1 {
       top: -30px;
       left: 70px;
+      z-index: 1;
 
       width: 199px;
       height: 256px;
+
       animation: float_floating1 6s infinite ease-in-out;
       animation-delay: 0s;
     }
@@ -139,10 +142,6 @@
       border: 2px solid rgba(27, 27, 27, 0.568);
       border-radius: 8px;
       filter: grayscale(100%);
-      
-      img:hover{
-        filter: filter(#00ff85);
-        }
     }
 
     .floating4 {
@@ -176,35 +175,113 @@
         transform: translateY(-15px) scale(1.1);
       }
     }
-  }
 
-  @keyframes float_floating2 {
-    0%,
-    100% {
-      transform: rotate(-10deg) scale(1);
+    @keyframes float_floating2 {
+      0%,
+      100% {
+        transform: rotate(-10deg) scale(1);
+      }
+      50% {
+        transform: rotate(0deg) scale(1.1);
+      }
     }
-    50% {
-      transform: rotate(0deg) scale(1.1);
+
+    @keyframes float_floating4 {
+      0%,
+      100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(20deg);
+      }
+    }
+
+    @keyframes float_floating5 {
+      0%,
+      100% {
+        transform: rotate(10deg) scale(1.1);
+      }
+      50% {
+        transform: rotate(0deg) scale(1);
+      }
     }
   }
+}
 
-  @keyframes float_floating4 {
-    0%,
-    100% {
-      transform: rotate(0deg);
+// Configurações Responsivas
+@media (max-width: 1323px) {
+  .hero {
+    // Mantém o flex-direction: row (padrão)
+    // Reduz um pouco o padding horizontal para dar mais espaço interno
+    padding: 4rem 2rem; 
+
+    // Otimizando o conteúdo
+    .hero-content {
+      gap: 1.25rem; // Reduz sutilmente o espaçamento interno (era 1.5rem)
+      width: 55%; // Dando um pouco mais de espaço para o texto
+      padding-right: 1.5rem; // Adiciona um padding para separação da imagem
+
+      .hero-title {
+        // Reduz sutilmente o tamanho máximo da fonte para dar respiro
+        font-size: clamp(2.5rem, 4.5vw, 3.2rem); // Era 3.5rem
+      }
+
+      .hero-description {
+        // Reduz o tamanho máximo da descrição
+        font-size: clamp(1rem, 2vw, 1.2rem); // Era 1.3rem
+        line-height: 1.6; // Reduz um pouco a altura da linha
+      }
     }
-    50% {
-      transform: rotate(20deg);
+
+    // Otimizando a imagem
+    .hero-image {
+      width: 45%; // Ocupa o espaço restante (era 50%)
+      padding: 0; // Remove o padding vertical
+      
+      .main-image img {
+        // Garante que a imagem principal se adapte ao novo espaço
+        width: clamp(200px, 18vw, 300px); // Reduz o tamanho máximo da imagem principal
+      }
+
+      // Reajustando as posições das imagens flutuantes para não saírem da tela
+      // Usando porcentagens mais seguras e 'rem' para offsets menores
+      .floating1 {
+        left: 5%;
+        top: -1.5rem;
+      }
+      
+      .floating2 {
+        left: 10%;
+        top: 55%;
+      }
+      
+      .floating3 {
+        left: 2%;
+        bottom: 1rem;
+      }
+      
+      .floating4 {
+        right: 5%;
+        bottom: 5%;
+      }
+      
+      .floating5 {
+        right: 5%;
+        top: -2rem;
+      }
     }
   }
+}
 
-  @keyframes float_floating5 {
-    0%,
-    100% {
-      transform: rotate(10deg) scale(1.1);
-    }
-    50% {
-      transform: rotate(0deg) scale(1);
+@media (max-width: 865px) {
+  .hero{
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 85px;
+
+    .hero-content, .hero-image{
+      width: 100%;
     }
   }
 }
