@@ -213,23 +213,22 @@
   .hero {
     // Mantém o flex-direction: row (padrão)
     // Reduz um pouco o padding horizontal para dar mais espaço interno
-    padding: 4rem 2rem; 
+    padding: 4rem 2rem;
 
     // Otimizando o conteúdo
     .hero-content {
-      gap: 1.25rem; // Reduz sutilmente o espaçamento interno (era 1.5rem)
-      width: 55%; // Dando um pouco mais de espaço para o texto
+      gap: 1.25rem;
+      // width: 55%; // Dando um pouco mais de espaço para o texto
       padding-right: 1.5rem; // Adiciona um padding para separação da imagem
 
       .hero-title {
-        // Reduz sutilmente o tamanho máximo da fonte para dar respiro
         font-size: clamp(2.5rem, 4.5vw, 3.2rem); // Era 3.5rem
       }
 
       .hero-description {
         // Reduz o tamanho máximo da descrição
         font-size: clamp(1rem, 2vw, 1.2rem); // Era 1.3rem
-        line-height: 1.6; // Reduz um pouco a altura da linha
+        line-height: 1.6;
       }
     }
 
@@ -237,10 +236,14 @@
     .hero-image {
       width: 45%; // Ocupa o espaço restante (era 50%)
       padding: 0; // Remove o padding vertical
-      
+
       .main-image img {
         // Garante que a imagem principal se adapte ao novo espaço
-        width: clamp(200px, 18vw, 300px); // Reduz o tamanho máximo da imagem principal
+        width: clamp(
+          200px,
+          18vw,
+          300px
+        ); // Reduz o tamanho máximo da imagem principal
       }
 
       // Reajustando as posições das imagens flutuantes para não saírem da tela
@@ -249,22 +252,22 @@
         left: 5%;
         top: -1.5rem;
       }
-      
+
       .floating2 {
         left: 10%;
         top: 55%;
       }
-      
+
       .floating3 {
         left: 2%;
         bottom: 1rem;
       }
-      
+
       .floating4 {
         right: 5%;
         bottom: 5%;
       }
-      
+
       .floating5 {
         right: 5%;
         top: -2rem;
@@ -273,15 +276,65 @@
   }
 }
 
-@media (max-width: 865px) {
-  .hero{
+@media (max-width: 880px) {
+  .hero {
     flex-direction: column;
     width: 100%;
     height: auto;
-    gap: 85px;
+    gap: 90px;
 
-    .hero-content, .hero-image{
+    .hero-content {
       width: 100%;
+      padding: 0;
+      align-items: center;
+
+      .hero-title,
+      .hero-description {
+        width: 100%;
+        text-align: center;
+      }
+
+      .btn-primary {
+        font-size: 1rem;
+      }
+    }
+
+    .hero-image {
+      width: 100%;
+
+      .main-image img {
+        // Garante que a imagem principal se adapte ao novo espaço
+        // width: clamp(200px, 18vw, 300px);
+      }
+
+      .floating {
+        width: 15%;
+      }
+
+      .floating1 {
+        left: 78px;
+        top: -35px;
+      }
+
+      .floating2 {
+        left: 82px;
+        top: 180px;
+      }
+
+      .floating3{
+        width: 50px;
+      }
+      
+      .floating4{
+        right: 19%;
+        bottom: 28%;
+      }
+
+      .floating5{
+        right: 17%;
+        top: 23px;
+        z-index: 1;
+      }
     }
   }
 }

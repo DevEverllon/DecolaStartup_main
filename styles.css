@@ -457,7 +457,6 @@ body.no-scroll {
   }
   .hero .hero-content {
     gap: 1.25rem;
-    width: 55%;
     padding-right: 1.5rem;
   }
   .hero .hero-content .hero-title {
@@ -495,15 +494,51 @@ body.no-scroll {
     top: -2rem;
   }
 }
-@media (max-width: 865px) {
+@media (max-width: 880px) {
   .hero {
     flex-direction: column;
     width: 100%;
     height: auto;
-    gap: 85px;
+    gap: 90px;
   }
-  .hero .hero-content, .hero .hero-image {
+  .hero .hero-content {
     width: 100%;
+    padding: 0;
+    align-items: center;
+  }
+  .hero .hero-content .hero-title,
+  .hero .hero-content .hero-description {
+    width: 100%;
+    text-align: center;
+  }
+  .hero .hero-content .btn-primary {
+    font-size: 1rem;
+  }
+  .hero .hero-image {
+    width: 100%;
+  }
+  .hero .hero-image .floating {
+    width: 15%;
+  }
+  .hero .hero-image .floating1 {
+    left: 78px;
+    top: -35px;
+  }
+  .hero .hero-image .floating2 {
+    left: 82px;
+    top: 180px;
+  }
+  .hero .hero-image .floating3 {
+    width: 50px;
+  }
+  .hero .hero-image .floating4 {
+    right: 19%;
+    bottom: 28%;
+  }
+  .hero .hero-image .floating5 {
+    right: 17%;
+    top: 23px;
+    z-index: 1;
   }
 }
 
