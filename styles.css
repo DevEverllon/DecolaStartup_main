@@ -555,16 +555,13 @@ body.no-scroll {
 .carrossel span {
   font-size: 1.5vw;
   padding-left: 1.5vw;
-  animation: textInfinit 8s infinite linear;
+  animation: textInfinit 158s infinite linear;
   position: relative;
   display: inline-block;
 }
 @keyframes textInfinit {
   to {
-    right: 100%;
-  }
-  from {
-    right: 100px;
+    transform: translateX(-100%);
   }
 }
 
