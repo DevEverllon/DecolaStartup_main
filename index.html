@@ -36,9 +36,16 @@
 
     <!-- SplitType -->
     <script src="https://cdn.jsdelivr.net/npm/split-type"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
+      <!-- Menu -->
       <nav class="navbar">
         <!-- Logo -->
         <a href="index.html" class="logo">
@@ -165,38 +172,26 @@
 
     <main class="main">
       <section class="carrossel">
-        <span class="hero-subtitle">
+        <span class="text-carrossel">
           <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
+          A Decola cria o site ideal para destacar e impulsionar o seu negócio
           <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
+          A Decola cria o site ideal para destacar e impulsionar o seu negócio
           <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
+          A Decola cria o site ideal para destacar e impulsionar o seu negócio
           <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
+          A Decola cria o site ideal para destacar e impulsionar o seu negócio
           <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
+          A Decola cria o site ideal para destacar e impulsionar o seu negócio
           <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
+          A Decola cria o site ideal para destacar e impulsionar o seu negócio
           <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
-          <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
-          <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
-          <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
-          <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
-          <i class="bx bx-rocket"></i>
-          Nós vamos desenvolver seu site
-          
+          A Decola cria o site ideal para destacar e impulsionar o seu negócio
         </span>
-        
       </section>
 
       <section class="about">
-        <h2 class="textoAnimado">
+        <h2 class="textoAnimado-about">
           <span>Sobre a Decola - </span>
           Especialista em criar soluções digitais personalizadas para
           impulsionar o sucesso do seu negócio. Com nossa expertise em
@@ -213,11 +208,118 @@
           sob medida e que superem suas expectativas.
         </h2>
       </section>
+
+      <section class="portifolio">
+        <div class="content-portifolio">
+          <h2 class="portifolio-title">
+            Nossos projetos que transformam negócios em resultados digitais
+          </h2>
+
+          <p class="portifolio-paragraph">
+            Conheça alguns sites e sistemas desenvolvidos pela Decola Startup,
+            com foco em design, performance e experiência do usuário.
+          </p>
+        </div>
+
+        <div class="swiper mySwiper" id="mySwiper-portfolio">
+          <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <div class="swiper-slide swiper-slide1">
+              <img
+                src="assets/portifolio-images/portifolio-img-1.png"
+                alt="slide 1"
+              />
+            </div>
+
+            <div class="swiper-slide swiper-slide1">
+              <img
+                src="assets/portifolio-images/portifolio-img-2.png"
+                alt="slide 1"
+              />
+            </div>
+
+            <div class="swiper-slide swiper-slide1">
+              <img
+                src="assets/portifolio-images/portifolio-img-3.png"
+                alt="slide 1"
+              />
+            </div>
+
+            <div class="swiper-slide swiper-slide1">
+              <img
+                src="assets/portifolio-images/portifolio-img-1.png"
+                alt="slide 1"
+              />
+            </div>
+
+            <div class="swiper-slide swiper-slide1">
+              <img
+                src="assets/portifolio-images/portifolio-img-2.png"
+                alt="slide 1"
+              />
+            </div>
+
+            <div class="swiper-slide swiper-slide1">
+              <img
+                src="assets/portifolio-images/portifolio-img-3.png"
+                alt="slide 1"
+              />
+            </div>
+          </div>
+
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="cta-content">
+          <h2 class="cta-title">
+            Pronto para levar seu negócio a voos mais altos?
+          </h2>
+
+          <p class="cta-description">
+            A Decola Startup combina inovação, tecnologia e estratégia para
+            transformar sua presença digital em resultados reais. Junte-se a nós
+            e descubra como podemos impulsionar o crescimento.
+          </p>
+        </div>
+
+        <div class="cta-info">
+          <span class="cta-info-item"
+            ><i class="fa-regular fa-lightbulb"></i>Sites que vendem e
+            encantam</span
+          >
+          <span class="cta-info-item">
+            <i class="fa-solid fa-gear"></i>Soluções sob medida</span>
+            
+          <span class="cta-info-item"
+            ><i class="fa-solid fa-magnifying-glass-dollar"></i>Performance e
+            SEO otimizados</span
+          >
+          <span class="cta-info-item"
+            ><i class="fa-solid fa-brain"></i>Experiência de usuário (UX)
+            impecável</span
+          >
+          <span class="cta-info-item"
+            ><i class="fa-regular fa-handshake"></i>Suporte e parceria
+            contínua</span
+          >
+        </div>
+      </section>
     </main>
 
     <!-- JavaScript -->
     <script src="scripts/_navbar.js"></script>
     <script src="scripts/_hero.js"></script>
     <script src="scripts/_carrossel.js"></script>
+    <script src="scripts/_linkHub-portfolio.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/_portifolio.js"></script>
   </body>
 </html>
+
+<!-- 
+  QUANTO MAIS SOMOS QUEBRADOS MAIS SOMOS ILUMINADOS
+-->

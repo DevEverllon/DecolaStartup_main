@@ -8,10 +8,10 @@
     background-color: transparent;
     color: $whitee-normal;
     border: 2px solid $primary-color;
-    border-radius: 15.5px;
+    border-radius: 9.5px;
     font-size: 1rem; //16px
     font-weight: 500;
-    padding:  8px 16px; //0.5rem 1rem
+    padding: 10px 18px; //0.5rem 1rem
     cursor: pointer;
     @include smooth-transition(all);    
 }

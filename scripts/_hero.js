@@ -1,8 +1,8 @@
-gsap.from(".hero-content", {
+gsap.from(".hero-content h2, h1, p", {
     x: -100,
     opacity: 0,
     duration: 1.5,
-    stagger: 0.2, 
+    stagger: 1, 
     ease: "power2.out"
 });
 
