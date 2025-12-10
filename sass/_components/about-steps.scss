@@ -1,0 +1,100 @@
+.about-steps {
+  margin-top: 4rem;
+  padding: 60px 40px;
+  border-top: 1px solid #ffffff31;
+
+  .title-about-steps {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: $whitee-normal;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .subtitle-about-steps {
+    color: $text-gray;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+
+    .card-steps {
+      width: 400px;
+      background-color: $black-dark;
+      border: 2px solid #212121;
+      border-radius: 22px;
+      height: 200px;
+      padding: 24px;
+
+      .body-steps {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .span-steps {
+          background-color: #b2b2b21f;
+          padding: 6px 12px;
+          border-radius: 50px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .title-card-steps {
+        font-size: 1.3rem;
+        line-height: 1.2;
+        font-weight: 500;
+        color: $whitee-normal;
+        margin-bottom: 12px;
+      }
+
+      .description-card-steps {
+        color: $text-gray;
+        font-size: 1rem;
+        text-align: left;
+        line-height: 1.5;
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-steps {
+    padding: 40px 20px;
+    gap: .4rem;
+
+    .title-about-steps {
+      font-size: 5vw;
+      line-height: 6vw;
+      width: 80%;
+      margin: auto;
+    }
+    
+    .subtitle-about-steps {
+      font-size: 3.5vw;
+      line-height: 4.5vw;
+      width: 80%;
+      margin: 1rem auto;
+    }
+
+    .steps-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .card-steps {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

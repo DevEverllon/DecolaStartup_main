@@ -1,10 +1,19 @@
-@import 'sass/_abstract/variable.scss';
-@import 'sass/_base/reset.scss';
-@import 'sass/_abstract/mixins.scss';
-@import 'sass/_base/base.scss';
-@import 'sass/_components/navbar.scss';
-@import 'sass/_components/hore.scss';
-@import 'sass/_components/carrossel.scss';
-@import 'sass/_components/about.scss';
-@import 'sass/_components/portfolio.scss';
-@import 'sass/_components/cta.scss';
+/* ABSTRACTS (variáveis, funções, mixins) */
+@import 'sass/_abstract/variable';
+@import 'sass/_abstract/mixins';
+
+/* BASE (reset, estilos globais) */
+@import 'sass/_base/reset';
+@import 'sass/_base/base';
+
+/* COMPONENTS / SECTIONS */
+@import 'sass/_components/navbar';
+@import 'sass/_components/hore';           // (talvez seja "hero"? Verificar)
+@import 'sass/_components/carrossel';
+@import 'sass/_components/about';
+@import 'sass/_components/about-steps';
+@import 'sass/_components/portfolio';
+@import 'sass/_components/cta';
+@import 'sass/_components/projects';
+@import 'sass/_components/services';
+@import 'sass/_components/faq';

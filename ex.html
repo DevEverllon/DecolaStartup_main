@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .projects-section {
+        text-align: center;
+        padding: 40px 20px;
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .project-card {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        border-radius: 16px;
+        background: #f0f0f0;
+        transition: 0.3s;
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .hidden {
+        display: none; /* Oculta inicialmente */
+      }
+
+      .btn-more {
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 1rem;
+        border: none;
+        background: #000;
+        color: #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn-more:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="projects-section">
+      <h2>Meus Projetos</h2>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- PROJETOS SEMPRE VISÍVEIS -->
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300" alt="" />
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300" alt="" />
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300" alt="" />
+        </div>
+
+        <!-- PROJETOS OCULTOS -->
+        <div class="project-card hidden">
+          <img src="https://via.placeholder.com/300" alt="" />
+        </div>
+        <div class="project-card hidden">
+          <img src="https://via.placeholder.com/300" alt="" />
+        </div>
+        <div class="project-card hidden">
+          <img src="https://via.placeholder.com/300" alt="" />
+        </div>
+      </div>
+
+      <button id="btnVerMais" class="btn-more">Ver Mais</button>
+    </section>
+
+    <script>
+      const btn = document.getElementById("btnVerMais");
+      const hiddenCards = document.querySelectorAll(".project-card.hidden");
+
+      btn.addEventListener("click", () => {
+        hiddenCards.forEach((card) => card.classList.toggle("hidden"));
+
+        btn.textContent =
+          btn.textContent === "Ver Mais" ? "Ver Menos" : "Ver Mais";
+      });
+    </script>
+  </body>
+</html>

@@ -22,16 +22,7 @@
     user-select: none;
   }
 
-  @media screen and (max-width: 768px) {
-    .carrossel{
-      padding: 15px 0;
-      width: 100vw;
-    }
-    .text-carrossel{
-      font-size: 3.5vw;
-    }
-  }
-
+  
   @keyframes textInfinit {
     to {
       transform: translateX(-50%);
@@ -42,3 +33,18 @@
     }
   }
 }
+
+    @media screen and (max-width: 768px) {
+      // .carrossel {
+      //   padding: 15px 0;
+      //   width: 96vw;
+      // }
+      .carrossel {
+        width: 96.9vw;
+        padding: 15px 0;
+        
+      .text-carrossel {
+        font-size: 3.5vw;
+      }
+      }
+    }
